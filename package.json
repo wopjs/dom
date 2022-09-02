@@ -14,8 +14,19 @@
     "lint": "eslint --ext .ts,.tsx . && prettier --check .",
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "dom"
+  ],
+  "maintainers": [
+    {
+      "name": "CRIMX",
+      "email": "straybugs@gmail.com"
+    },
+    {
+      "name": "hyrious",
+      "email": "hyrious@outlook.com"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.36.1",
