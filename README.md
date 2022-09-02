@@ -4,6 +4,12 @@
 
 Collection of common DOM utilities.
 
+## Install
+
+```
+npm add @wopjs/dom
+```
+
 ## License
 
 MIT @ [wop](https://github.com/wopjs)
