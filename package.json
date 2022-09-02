@@ -1,0 +1,21 @@
+{
+  "name": "@wopjs/dom",
+  "version": "0.1.0",
+  "description": "Collection of common DOM utilities",
+  "type": "module",
+  "exports": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.8.2"
+  }
+}
