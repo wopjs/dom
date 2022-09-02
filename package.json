@@ -10,6 +10,7 @@
     "dist"
   ],
   "scripts": {
+    "prepublish": "pnpm run build",
     "lint": "eslint --ext .ts,.tsx . && prettier --check .",
     "build": "tsc"
   },
