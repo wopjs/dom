@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "description": "Collection of common DOM utilities",
   "type": "module",
-  "exports": "./index.js",
-  "types": "./index.d.ts",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "src",
     "dist"
   ],
   "scripts": {
     "lint": "eslint --ext .ts,.tsx . && prettier --check .",
-    "build": "tsc src/index.ts"
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
