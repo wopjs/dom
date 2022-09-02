@@ -1,3 +1,24 @@
 {
-  "words": ["wopjs"]
+  "language": "en",
+  "words": [
+    "wopjs",
+    "coverallsapp",
+    "CRIMX",
+    "hyrious",
+    "lcov",
+    "pnpm",
+    "preinstall",
+    "typedoc",
+    "Vals",
+    "vite",
+    "vitest"
+  ],
+  "ignorePaths": [
+    "**/coverage/**",
+    "**/node_modules/**",
+    "**/dist/**",
+    "cspell.config.js",
+    "pnpm-lock.yaml",
+    "CHANGELOG.md"
+  ]
 }
