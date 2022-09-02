@@ -6,7 +6,7 @@ interface CreateElement {
   (tagName: string, options?: ElementCreationOptions): HTMLElement;
 }
 
-export const element: CreateElement = document.createElement.bind(document);
+export const element: CreateElement = /* @__PURE__ */ document.createElement.bind(document);
 
 export function attr(el: Element, name: string, value?: string | null | undefined) {
   if (value == null) {
