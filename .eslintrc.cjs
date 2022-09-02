@@ -6,11 +6,7 @@ const config = {
   },
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
-  extends: [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-  ],
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
   rules: {
     "@typescript-eslint/consistent-type-imports": ["warn"],
     "@typescript-eslint/no-empty-interface": "off",
