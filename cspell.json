@@ -1,17 +1,18 @@
 {
   "language": "en",
   "words": [
-    "wopjs",
     "coverallsapp",
     "CRIMX",
     "hyrious",
     "lcov",
     "pnpm",
     "preinstall",
+    "tsup",
     "typedoc",
     "Vals",
     "vite",
-    "vitest"
+    "vitest",
+    "wopjs"
   ],
   "ignorePaths": [
     "**/coverage/**",
