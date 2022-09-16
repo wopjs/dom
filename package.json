@@ -1,6 +1,6 @@
 {
   "name": "@wopjs/dom",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Collection of common DOM utilities. TypeScript friendly and minification friendly.",
   "repository": "wopjs/dom",
   "type": "module",
