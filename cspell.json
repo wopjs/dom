@@ -7,6 +7,7 @@
     "lcov",
     "pnpm",
     "preinstall",
+    "treeshake",
     "tsup",
     "typedoc",
     "Vals",

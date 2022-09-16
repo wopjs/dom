@@ -2,7 +2,9 @@
   "name": "@wopjs/dom",
   "version": "0.1.2",
   "description": "Collection of common DOM utilities. TypeScript friendly and minification friendly.",
+  "repository": "wopjs/dom",
   "type": "module",
+  "main": "./dist/index.cjs",
   "exports": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
@@ -12,7 +14,7 @@
   "scripts": {
     "prepublish": "pnpm run build",
     "lint": "eslint --ext .ts,.tsx . && prettier --check .",
-    "build": "tsup src/index.ts --clean --format esm --target esnext --dts"
+    "build": "tsup src/index.ts --clean --format esm,cjs --treeshake --target esnext --dts"
   },
   "keywords": [
     "dom"
