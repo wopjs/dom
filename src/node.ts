@@ -1,23 +1,18 @@
 export function isHTMLElement(node: unknown): node is HTMLElement {
-  return typeof node === 'object' && (node as Node)?.nodeType === Node.ELEMENT_NODE;
+  return typeof node === "object" && (node as Node)?.nodeType === Node.ELEMENT_NODE;
 }
 
 export function isTextNode(node: unknown): node is Text {
-  return typeof node === 'object' && (node as Node)?.nodeType === Node.TEXT_NODE;
+  return typeof node === "object" && (node as Node)?.nodeType === Node.TEXT_NODE;
 }
 
 /**
  * Creates a text string from the specified value.
  * @param data String that specifies the nodeValue property of the text node.
  */
-export const createTextNode =
-  /* @__PURE__ */ document.createTextNode.bind(document);
+export const createTextNode = /* @__PURE__ */ document.createTextNode.bind(document);
 
-export function insertBefore<T extends Node>(
-  target: Node,
-  node: T,
-  anchor?: Node
-): T {
+export function insertBefore<T extends Node>(target: Node, node: T, anchor?: Node): T {
   return target.insertBefore(node, anchor || null);
 }
 
@@ -31,11 +26,7 @@ export function removeChild<T extends Node>(target: Node, child: T): T {
   return target.removeChild(child);
 }
 
-export function replaceChild<T extends Node>(
-  target: Node,
-  node: Node,
-  child: T
-): T {
+export function replaceChild<T extends Node>(target: Node, node: Node, child: T): T {
   return target.replaceChild(node, child);
 }
 

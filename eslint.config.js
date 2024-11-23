@@ -31,9 +31,9 @@ export default tsEslint.config(
         "error",
         {
           "newlines-between": "always",
-          alphabetize: { order: "asc", caseInsensitive: true },
-          groups: ["object", "type", ["builtin", "external", "internal"], ["parent", "sibling", "index"]],
-          pathGroups: [
+          "alphabetize": { order: "asc", caseInsensitive: true },
+          "groups": ["object", "type", ["builtin", "external", "internal"], ["parent", "sibling", "index"]],
+          "pathGroups": [
             {
               pattern: "*.+(scss|css|less)",
               patternOptions: { matchBase: true },
@@ -42,8 +42,8 @@ export default tsEslint.config(
             { pattern: "~/**", group: "internal", position: "after" },
             { pattern: "../**", group: "parent", position: "before" },
           ],
-          pathGroupsExcludedImportTypes: ["builtin", "external", "object", "type"],
-          distinctGroup: false,
+          "pathGroupsExcludedImportTypes": ["builtin", "external", "object", "type"],
+          "distinctGroup": false,
         },
       ],
     },
@@ -70,5 +70,5 @@ export default tsEslint.config(
         },
       ],
     },
-  }
+  },
 );
