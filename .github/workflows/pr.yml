@@ -1,19 +1,11 @@
-name: Node.js Package
+on: ["pull_request"]
 
-on:
-  push:
-    tags: "v**"
-  workflow_dispatch:
+name: Build and Test PR
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: true
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
@@ -21,7 +13,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-          registry-url: "https://registry.npmjs.org"
           cache: npm
 
       - name: Install dependencies 📦
@@ -31,10 +22,13 @@ jobs:
           npm_config_fund: "false"
           npm_config_loglevel: "error"
 
+      - name: Lint 🧹
+        run: |
+          npm run lint
+          npm run ts-check
+
       - name: Build 🔧
         run: npm run build
 
-      - name: Publish Package 🚀
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # - name: Test 🧪
+      #   run: npm run test:ci

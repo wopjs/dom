@@ -3,9 +3,13 @@
   "words": [
     "coverallsapp",
     "CRIMX",
+    "endregion",
     "hyrious",
     "lcov",
-    "pnpm",
+    "loglevel",
+    "mjsx",
+    "mtsx",
+    "Parens",
     "preinstall",
     "treeshake",
     "tsup",
@@ -13,14 +17,14 @@
     "Vals",
     "vite",
     "vitest",
-    "wopjs"
+    "wopjs",
+    "yoctocolors"
   ],
   "ignorePaths": [
     "**/coverage/**",
     "**/node_modules/**",
     "**/dist/**",
     "cspell.config.js",
-    "pnpm-lock.yaml",
     "CHANGELOG.md"
   ]
 }

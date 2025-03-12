@@ -32,4 +32,42 @@ export function addEventListener(
   return () => target.removeEventListener(type, listener, options);
 }
 
-export const listen = addEventListener;
+export { addEventListener as listen };
+
+export interface EventLike {
+  preventDefault(): void;
+  stopPropagation(): void;
+}
+
+export function stopPropagation(ev: EventLike): void {
+  ev.stopPropagation();
+}
+
+export function stopEvent(ev: EventLike, cancelBubble?: boolean): void {
+  ev.preventDefault();
+  if (cancelBubble) {
+    ev.stopPropagation();
+  }
+}
+
+export interface EventLikeConstructor<E extends Event> {
+  new (type: string, options: EventInit): E;
+}
+
+/**
+ * Simulate an event, ensures the `target` property is correct.
+ *
+ * ```js
+ * dispatchEvent(window, KeyboardEvent, "keydown", { key: "Enter" });
+ * ```
+ */
+export function dispatchEvent<E extends Event>(
+  target: EventTarget,
+  Ctor: EventLikeConstructor<E>,
+  type: string,
+  init?: EventInit & Partial<E>,
+): void {
+  const event = new Ctor(type, { bubbles: true, cancelable: true, ...init });
+  Object.defineProperty(event, "target", { get: () => target });
+  target.dispatchEvent(event);
+}

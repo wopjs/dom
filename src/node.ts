@@ -1,9 +1,9 @@
 export function isHTMLElement(node: unknown): node is HTMLElement {
-  return typeof node === "object" && (node as Node)?.nodeType === Node.ELEMENT_NODE;
+  return typeof node === "object" && (node as Node | null)?.nodeType === Node.ELEMENT_NODE;
 }
 
 export function isTextNode(node: unknown): node is Text {
-  return typeof node === "object" && (node as Node)?.nodeType === Node.TEXT_NODE;
+  return typeof node === "object" && (node as Node | null)?.nodeType === Node.TEXT_NODE;
 }
 
 /**
@@ -16,7 +16,7 @@ export function insertBefore<T extends Node>(target: Node, node: T, anchor?: Nod
   return target.insertBefore(node, anchor || null);
 }
 
-export const insert = insertBefore;
+export { insertBefore as insert };
 
 export function appendChild<T extends Node>(target: Node, child: T): T {
   return target.appendChild(child);

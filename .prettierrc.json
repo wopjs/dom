@@ -1,10 +1,17 @@
 {
+  "arrowParens": "avoid",
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": {
+        "printWidth": 80
+      }
+    }
+  ],
   "printWidth": 120,
-  "trailingComma": "all",
-  "tabWidth": 2,
   "semi": true,
   "singleQuote": false,
-  "endOfLine": "auto",
-  "arrowParens": "avoid",
-  "quoteProps": "consistent"
+  "tabWidth": 2,
+  "trailingComma": "all"
 }
